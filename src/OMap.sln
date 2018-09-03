@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMap.App", "OMap.App\OMap.App.csproj", "{6C794F54-E4D7-467B-AE83-0DE281BE64EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapControl.WPF", "MapControl\MapControl.WPF.csproj", "{226F3575-B683-446D-A2F0-181291DC8787}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Caching", "Caching", "{FD2A27FF-0074-46F1-9606-45EE2902B079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageFileCache.WPF", "ImageFileCache.WPF\ImageFileCache.WPF.csproj", "{86470440-FEE2-4120-AF5A-3762FB9C536F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileDbCache.WPF", "FileDbCache.WPF\FileDbCache.WPF.csproj", "{EF44F661-B98A-4676-927F-85D138F82300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMap.Web", "OMap.Web\OMap.Web.csproj", "{9FAD25AD-D422-4A6C-8758-3C9CA47C96AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMap.Data", "OMap.Data\OMap.Data.csproj", "{719BD0FA-1416-46FE-872B-7DB1F1CCF50B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C794F54-E4D7-467B-AE83-0DE281BE64EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C794F54-E4D7-467B-AE83-0DE281BE64EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C794F54-E4D7-467B-AE83-0DE281BE64EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C794F54-E4D7-467B-AE83-0DE281BE64EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226F3575-B683-446D-A2F0-181291DC8787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226F3575-B683-446D-A2F0-181291DC8787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226F3575-B683-446D-A2F0-181291DC8787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226F3575-B683-446D-A2F0-181291DC8787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86470440-FEE2-4120-AF5A-3762FB9C536F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86470440-FEE2-4120-AF5A-3762FB9C536F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86470440-FEE2-4120-AF5A-3762FB9C536F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86470440-FEE2-4120-AF5A-3762FB9C536F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF44F661-B98A-4676-927F-85D138F82300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF44F661-B98A-4676-927F-85D138F82300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF44F661-B98A-4676-927F-85D138F82300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF44F661-B98A-4676-927F-85D138F82300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FAD25AD-D422-4A6C-8758-3C9CA47C96AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FAD25AD-D422-4A6C-8758-3C9CA47C96AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FAD25AD-D422-4A6C-8758-3C9CA47C96AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FAD25AD-D422-4A6C-8758-3C9CA47C96AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719BD0FA-1416-46FE-872B-7DB1F1CCF50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719BD0FA-1416-46FE-872B-7DB1F1CCF50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719BD0FA-1416-46FE-872B-7DB1F1CCF50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719BD0FA-1416-46FE-872B-7DB1F1CCF50B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86470440-FEE2-4120-AF5A-3762FB9C536F} = {FD2A27FF-0074-46F1-9606-45EE2902B079}
+		{EF44F661-B98A-4676-927F-85D138F82300} = {FD2A27FF-0074-46F1-9606-45EE2902B079}
+	EndGlobalSection
+EndGlobal

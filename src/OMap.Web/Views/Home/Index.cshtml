@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<br />
+<br />
+<br />
+<br />
+
+@section style{
+    <link href="~/Scripts/leaflet/leaflet.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default" style="height:550px;">
+            <div class="panel-body">
+                <div id="map" class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+@section scripts{
+
+    <script src="~/Scripts/leaflet/leaflet.js"></script>
+
+    <script src="~/Scripts/leaflet/config.js"></script>
+
+}

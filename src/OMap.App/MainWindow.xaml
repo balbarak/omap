@@ -1,0 +1,83 @@
+﻿<Window x:Class="OMap.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:map="clr-namespace:MapControl;assembly=MapControl.WPF"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uc ="clr-namespace:OMap.App.UserControls"
+        xmlns:local="clr-namespace:OMap.App"
+        mc:Ignorable="d"
+        Title="Offline Map Generator" Height="622" Width="869">
+
+    <Window.Resources>
+
+        <map:TileLayer x:Key="OpenStreetMap" 
+                       SourceName="OpenStreetMap"
+                       Description="Maps © [OpenStreetMap Contributors](http://www.openstreetmap.org/copyright)"
+                       TileSource="http://{c}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                       MaxZoomLevel="19"/>
+
+        <map:TileLayer x:Key="Mapbox"
+                       SourceName="Mapbox"
+                       TileSource="https://api.mapbox.com/styles/v1/balbarak/cj19mwi9j009w2ro4v8udvboq/tiles/512/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmFsYmFyYWsiLCJhIjoiY2l4dzJxNDN4MDAwdDJ3bGE0anFuNDg4biJ9.ROCk02csUKf-DbjVG1LMDA"
+                       MaxZoomLevel="19"/>
+
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="31"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="tabControl" Grid.Column="1" Margin="0,10,0,0">
+            <TabItem Header="Map">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="32"/>
+                    </Grid.RowDefinitions>
+
+                    <map:Map x:Name="map" 
+                             ZoomLevel="11"
+                             MaxZoomLevel="20" 
+                             Center="{Binding MapCenter}"
+                             TileLayer="{StaticResource OpenStreetMap}"
+                             MouseLeftButtonDown="MapMouseLeftButtonDown" 
+                             MouseRightButtonDown="MapMouseRightButtonDown"
+                             MouseMove="MapMouseMove" MouseLeave="MapMouseLeave"
+                             ManipulationInertiaStarting="MapManipulationInertiaStarting">
+                    </map:Map>
+
+                    <StatusBar Grid.Row="1">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock x:Name="mouseLocation" Margin="5" VerticalAlignment="Bottom" FontFamily="Segoe UI Mono"/>
+
+                            <TextBlock Margin="5" Text="Zoom: " VerticalAlignment="Bottom" FontFamily="Segoe UI Mono"/>
+                            <TextBlock Text="{Binding TargetZoomLevel,ElementName=map}" VerticalAlignment="Bottom" FontFamily="Segoe UI Mono" Margin="0,5"/>
+
+                        </StackPanel>
+                    </StatusBar>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tiles Exporter">
+                <Grid>
+                    <uc:TileExportUC Margin="10,10,10.2,9.8" Width="Auto" Height="Auto"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StatusBar Grid.Row="1" Grid.ColumnSpan="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5" Text="Status: " VerticalAlignment="Bottom" FontFamily="Segoe UI Mono"/>
+                <TextBlock Text="Ready" VerticalAlignment="Bottom" FontFamily="Segoe UI Mono" Margin="0,5"/>
+            </StackPanel>
+        </StatusBar>
+        <Button x:Name="btnLoadTiles" Content="Load Tiles" Margin="10,10,10,0" VerticalAlignment="Top" Click="btnLoadTiles_Click"/>
+
+    </Grid>
+</Window>
